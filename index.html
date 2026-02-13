@@ -8,18 +8,24 @@
 </head>
 <body>
 
-    <nav class="navbar">
-        <a href="#" class="logo">Prompt <span>Copy</span></a>
-        
-        <div class="nav-actions">
-            <button class="btn btn-primary" onclick="openSubscribeModal()">Subscribe (500 Tokens)</button>
-            <div class="token-display">
-                Tokens: <span id="token-count" class="token-count">50</span>
-            </div>
-            <button class="btn btn-outline">Login</button>
-            <button class="btn btn-primary">Sign Up</button>
+  <nav class="navbar">
+    <a href="#" class="logo">Prompt <span>Copy</span></a>
+    
+    <button class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
+    <div class="nav-actions" id="nav-actions">
+        <button class="btn btn-primary" onclick="openSubscribeModal()">Subscribe (500 Tokens)</button>
+        <div class="token-display">
+            Tokens: <span id="token-count" class="token-count">50</span>
         </div>
-    </nav>
+        <button class="btn btn-outline">Login</button>
+        <button class="btn btn-primary">Sign Up</button>
+    </div>
+</nav>
 
     <div class="container">
         <h2 class="section-title">Daily Character Consistency Prompts</h2>
