@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Copy - Ad Supported</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">Prompt <span>Copy</span></a>
+        
+        <div class="nav-actions">
+            <button class="btn btn-primary" onclick="openSubscribeModal()">Subscribe (500 Tokens)</button>
+            <div class="token-display">
+                Tokens: <span id="token-count" class="token-count">50</span>
+            </div>
+            <button class="btn btn-outline">Login</button>
+            <button class="btn btn-primary">Sign Up</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title">Daily Character Consistency Prompts</h2>
+        <div class="grid" id="image-grid"></div>
+    </div>
+
+    <div id="toast" class="toast">Command copied! -10 Tokens</div>
+
+    <div id="subModal" class="modal-overlay">
+        <div class="modal">
+            <h2>Upgrade to Pro</h2>
+            <p>You have used your free daily allowance. Subscribe now to get 500 tokens every day.</p>
+            <button class="btn btn-primary" onclick="subscribeUser()">Subscribe Now ($9.99)</button>
+            <button class="btn btn-outline" onclick="closeSubscribeModal()" style="margin-top: 10px;">Close</button>
+        </div>
+    </div>
+
+    <div id="adModal" class="modal-overlay">
+        <div class="modal">
+            <h2>Sponsored Message</h2>
+            <p>Your command is being prepared...</p>
+            
+            <div class="ad-box">
+                ADVERTISEMENT GOES HERE
+            </div>
+
+            <div class="timer-text" id="adTimerDisplay">Ad closing in 5s...</div>
+            <p style="font-size: 0.8rem; margin-top:5px;">Please wait while we process your request.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
