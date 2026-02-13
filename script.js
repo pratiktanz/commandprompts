@@ -166,3 +166,19 @@ function showToast(message) {
 
 /* --- INITIAL LOAD --- */
 updateTokenDisplay(getTokens());
+
+/* --- Add to the bottom of script.js --- */
+
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('#nav-actions');
+
+menu.addEventListener('click', function() {
+    menu.classList.toggle('is-active');
+    menuLinks.classList.toggle('active');
+});
+
+// Close menu when a button is clicked (like Subscribe)
+document.querySelectorAll('.nav-actions .btn').forEach(n => n.addEventListener('click', () => {
+    menu.classList.remove('is-active');
+    menuLinks.classList.remove('active');
+}));
